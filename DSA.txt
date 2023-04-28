@@ -1,0 +1,30 @@
+Question-sqrt
+
+class Solution {
+    public int mySqrt(int x) {
+  
+         int value=0;
+        if(x==0){
+            return 0;
+        }
+        if(x==1){
+            return 1;
+        }
+        int m=x/2;
+        m=m+1;
+        for(int i=1; i<=m; i++){
+            long a=(long)i*i;
+            if(a==x){
+                value=i;
+                break;
+            }
+            else if(a>x){
+                i=i-1;
+                value=i;
+                break;
+            }
+
+        }
+        return value;
+
+    }
